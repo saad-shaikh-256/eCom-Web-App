@@ -19,7 +19,7 @@
 
 html,
 body {
-   background-color: var(--white-color);
+   background-color: #EBEBEB;
    overflow-x: hidden;
    width: 100vw;
    height: 100vh;
@@ -38,7 +38,7 @@ body {
       width: 100%;
       height: 100%;
       justify-content: start;
-      padding: 35px 0;
+      padding: 35px 0 0 0;
       flex-direction: column;
       overflow: hidden;
       position: relative;
@@ -55,152 +55,140 @@ body {
          display: flex;
          justify-content: space-between;
          align-items: center;
+         position: absolute;
 
          #centerLogo {
-            font-size: 1.375rem;
-            font-weight: 700;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #424242;
          }
       }
 
       #productContainer {
-         height: fit-content;
+         height: 100%;
          width: 100%;
          display: flex;
          flex-direction: column;
-         gap: 24px;
 
-
-         #newCollection {
+         #upperContainer {
             display: flex;
             width: 100%;
-            padding: 0 24px;
-            justify-content: start;
-            align-items: center;
-            gap: 16px;
+            height: 45%;
+            padding: 12px 24px;
+            justify-content: center;
+            align-items: end;
+            gap: 8px;
             overflow: scroll;
-            scrollbar-width: 0px;
-            scrollbar-color: transparent transparent;
+            background-image: url(../Assets/Images/bg.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
 
-            img {
-               border-radius: 24px;
+            #imgContainer {
+               height: 44px;
+               width: 44px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               overflow: hidden;
+               background-color: #EBEBEB;
+               border-radius: 8px;
+               border: 1.5px solid #FFFFFF;
+
+               img {
+                  height: 37px;
+                  width: 34px;
+               }
+
+               &:first-child {
+                  border-color: #FF8D41;
+               }
             }
          }
 
-         #newArrival,
-         #bestSeller {
+         #lowerContainer {
+            height: 55%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            gap: 1rem;
+            background-color: #ffffff;
+            padding: 16px 24px 35px 24px;
 
-            #title {
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
+            #topContainer {
+               height: fit-content;
                width: 100%;
-               padding: 0 24px;
+               display: flex;
+               flex-direction: column;
 
                #heading {
-                  font-size: 1.125rem;
-                  font-weight: 600;
-                  color: #424242;
-               }
+                  height: fit-content;
+                  width: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: start;
 
-               #seeAll {
-                  font-size: 0.75rem;
-                  font-weight: 500;
-                  color: #BDBDBD;
+                  #titles {
+                     display: flex;
+                     flex-direction: column;
+                     align-items: flex-start;
+                     gap: 8px;
+
+                     #name {
+                        color: #424242;
+                        font-size: 18px;
+                        font-weight: 600;
+                        letter-spacing: 0.2px;
+                     }
+
+                     #category {
+                        color: #9E9E9E;
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: 0.2px;
+                     }
+                  }
                }
             }
 
-            #productCategories {
+            #bottomContainer {
+               height: fit-content;
                width: 100%;
                display: flex;
-               padding: 0 24px;
-               gap: 12px;
-               justify-content: start;
+               justify-content: center;
                align-items: center;
-               overflow: scroll;
-               scrollbar-width: 0px;
-               scrollbar-color: transparent transparent;
+               gap: 12px;
 
-               span {
+               #addTocart {
+                  order: 2;
+                  height: 100%;
                   display: flex;
-                  padding: 0.5rem 1rem;
                   justify-content: center;
                   align-items: center;
-                  gap: 0.25rem;
-                  border-radius: 1rem;
-                  background: #F5F5F5;
-                  color: #9E9E9E;
-                  font-size: 0.75rem;
+                  border-radius: 999999px;
+                  background: #FF8D41;
+                  color: #ffffff;
+                  flex-grow: 1;
+                  font-size: 14px;
+                  font-weight: 600;
                }
 
-               .selected {
-                  background: var(--primary-color);
-                  color: var(--white-color);
-                  font-size: 0.75rem;
-                  font-weight: 500;
-               }
-            }
-
-            #cardSlider {
-               display: flex;
-               flex-direction: row;
-               gap: 1rem;
-               width: 100%;
-               padding: 0 24px;
-               justify-content: start;
-               align-items: center;
-               overflow: scroll;
-               scrollbar-width: 0px;
-               scrollbar-color: transparent transparent;
-
-               #productCard {
-                  text-decoration: none;
-                  color: #212121;
+               #buttons {
+                  order: 1;
                   height: fit-content;
-                  width: 165px;
+                  width: fit-content;
                   display: flex;
-                  justify-content: start;
-                  align-items: start;
-                  flex-direction: column;
-                  gap: 0.75rem;
-               }
-
-               #productDetail {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  gap: 0.25rem;
-                  align-self: stretch;
-                  font-size: 0.875rem;
-                  font-weight: 500;
+                  flex-direction: row;
+                  padding: 8px;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 8px;
+                  border-radius: 999999px;
+                  background: #FAFAFA;
                }
             }
          }
-
-         #bestSeller {
-            #cardSlider {
-               padding-bottom: 60px;
-
-            }
-         }
-      }
-
-      #bottomNav {
-         position: absolute;
-         position: fixed;
-         bottom: 0;
-         width: 100%;
-         display: flex;
-         padding: 24px 32px;
-         justify-content: space-between;
-         align-items: flex-start;
-         border-top: 1px solid #FAFAFA;
-         background: rgba(255, 255, 255, 0.80);
-         backdrop-filter: blur(2.5px);
       }
    }
 }
