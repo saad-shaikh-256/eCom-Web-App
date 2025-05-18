@@ -1,6 +1,6 @@
 # eCom-Web-App
 
-![eCom Web App](https://github.com/saad-shaikh-256/eCom-Web-App/blob/main/Assets/Images/Cover.jpg)
+![eCom Web App](https://github.com/saad-shaikh-256/eCom-Web-App/blob/main/Assets/Images/Fullsize%20Cover.png?raw=true)
 
 ## Overview
 
